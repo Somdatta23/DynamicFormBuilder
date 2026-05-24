@@ -1,0 +1,115 @@
+{
+  "form_title": "User Registration",
+  "theme": {
+    "background_color": "#1C1C1E",
+    "text_color": "#FFFFFF",
+    "border_color": "#3A3A3C",
+    "error_color": "#FF453A",
+    "primary_color": "#0A84FF",
+    "field_background_color": "#2C2C2E"
+  },
+  "fields": [
+    {
+      "id": "full_name",
+      "type": "TEXT",
+      "subtype": "PLAIN",
+      "label": "Full Name",
+      "placeholder": "Enter your full name",
+      "required": true,
+      "max_length": 50
+    },
+    {
+      "id": "bio",
+      "type": "TEXT",
+      "subtype": "MULTILINE",
+      "label": "Bio",
+      "placeholder": "Tell us about yourself",
+      "required": false,
+      "max_length": 200
+    },
+    {
+      "id": "age",
+      "type": "TEXT",
+      "subtype": "NUMBER",
+      "label": "Age",
+      "placeholder": "Enter your age",
+      "required": true,
+      "max_length": 3
+    },
+    {
+      "id": "website",
+      "type": "TEXT",
+      "subtype": "URI",
+      "label": "Website",
+      "placeholder": "https://example.com",
+      "required": false
+    },
+    {
+      "id": "password",
+      "type": "TEXT",
+      "subtype": "SECURE",
+      "label": "Password",
+      "placeholder": "Enter password",
+      "required": true,
+      "max_length": 30
+    },
+    {
+      "id": "country",
+      "type": "DROPDOWN",
+      "label": "Country",
+      "required": true,
+      "allow_multiple": false,
+      "options": [
+        { "id": "us", "label": "United States" },
+        { "id": "in", "label": "India" },
+        { "id": "uk", "label": "United Kingdom" },
+        { "id": "de", "label": "Germany" }
+      ],
+      "default_values": ["in"]
+    },
+    {
+      "id": "languages",
+      "type": "DROPDOWN",
+      "label": "Languages Known",
+      "required": false,
+      "allow_multiple": true,
+      "options": [
+        { "id": "en", "label": "English" },
+        { "id": "hi", "label": "Hindi" },
+        { "id": "es", "label": "Spanish" },
+        { "id": "fr", "label": "French" }
+      ],
+      "default_values": ["en", "hi"]
+    },
+    {
+      "id": "notifications",
+      "type": "TOGGLE",
+      "label": "Enable Notifications",
+      "default_value": true,
+      "required": false
+    },
+    {
+      "id": "DOB",
+      "type": "DatePicker",
+      "label": "Date Of Birth",
+      "default_value": true,
+      "required": false
+    },
+    {
+      "id": "terms",
+      "type": "CHECKBOX",
+      "label": "I agree to the Terms and Conditions",
+      "required": true,
+      "metadata": {
+        "link_text": "Terms and Conditions",
+        "link_url": "https://example.com/terms"
+      }
+    },
+    {
+      "id": "newsletter",
+      "type": "CHECKBOX",
+      "label": "Subscribe to newsletter",
+      "required": false
+    }
+  ]
+}
